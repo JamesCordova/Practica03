@@ -1,8 +1,11 @@
 import java.util.Arraylist;
 
 public class TADHeap<T extends Comparable<T>>{
-  private Arraylist<T> heap;
+  private ArrayList<T> heap;
 
+  public TADHeap(){
+    heap = new Arraylist<T>();
+  }
   public void insert(){
     a[++n] = x;
     T temp;
