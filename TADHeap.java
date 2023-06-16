@@ -8,8 +8,9 @@ public class TADHeap<T extends Comparable<T>>{
   }
   public void insert(T item){
     heap.add(item);
-
-    for(int i = heap.size() - 1; i > 1 && heap.get(i).compareTo(heap.get(padre)) > 0; heap.get(i)) {
+    int i = heap.size() - 1;
+    int padre = padre(i);
+    while( i > 1 && heap.get(i).compareTo(heap.get(padre)) > 0) {
       //intercambiamos con el padre
       padre = i / 2;
       cambiar(i, padre)
@@ -22,6 +23,10 @@ public class TADHeap<T extends Comparable<T>>{
     T temp = heap.get(padre);
     heap.set(padre, heap.get(i));
     heap.set(i, temp);
+  }
+
+  private int padre(int i){
+    return i/2;
   }
 
 }
