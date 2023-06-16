@@ -30,4 +30,12 @@ public class TADHeap<T extends Comparable<T>>{
     return i/2;
   }
 
+  public String toString(){
+    String res = "";
+    for(int i = 0; i < heap.size(); i++){
+      res += heap.get(i) + " ";
+    }
+    return res;
+  }
+
 }

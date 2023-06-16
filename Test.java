@@ -1,7 +1,7 @@
-public class Test(){
-  public void main(String[] args){
+public class Test{
+  public static void main(String[] args){
     TADHeap<Integer> n = new TADHeap<Integer>();
-    n.add(12);
-
+    n.insert(12);
+    System.out.println(n);
   }
 }
