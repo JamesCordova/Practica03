@@ -8,7 +8,8 @@ public class TADHeap<T extends Comparable<T>>{
   }
   public void insert(T item){
     heap.add(item);
-    for(int i = heap.size(); i>1 && a[j]>a[j/2]; heap.get(i)) {
+
+    for(int i = heap.size() - 1; i > 1 && heap.get(i).compareTo(heap.get(padre)) > 0; heap.get(i)) {
       //intercambiamos con el padre
       padre = i / 2;
       cambiar(i, padre)
