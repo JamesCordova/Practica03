@@ -1,4 +1,4 @@
-import java.util.Arraylist;
+import java.util.ArrayList;
 
 public class TADHeap<T extends Comparable<T>>{
   private ArrayList<T> heap;
@@ -13,7 +13,7 @@ public class TADHeap<T extends Comparable<T>>{
     while( i > 1 && heap.get(i).compareTo(heap.get(padre)) > 0) {
       //intercambiamos con el padre
       cambiar(i, padre);
-      i = parent; // pasariamos a evaluar el nodo del parent para saber si debemos cambiar al padre de este tambien
+      i = padre; // pasariamos a evaluar el nodo del parent para saber si debemos cambiar al padre de este tambien
       padre = padre(i); // avanzamos
     }
   }
