@@ -9,11 +9,12 @@ public class TADHeap<T extends Comparable<T>>{
   public void insert(T item){
     heap.add(item);
     int i = heap.size() - 1;
-    int padre = padre(i);
+    int padre = padre(i); // obtenemos padre antes del bucle
     while( i > 1 && heap.get(i).compareTo(heap.get(padre)) > 0) {
       //intercambiamos con el padre
-      padre = i / 2;
-      cambiar(i, padre)
+      cambiar(i, padre);
+      i = parent; // pasariamos a evaluar el nodo del parent para saber si debemos cambiar al padre de este tambien
+      padre = padre(i); // avanzamos
     }
   }
   public T remove(){
