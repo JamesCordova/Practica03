@@ -18,7 +18,7 @@ public class TADHeap<T extends Comparable<T>>{
     }
   }
   public T remove(){
-
+    return null;
   }
   private void cambiar(int i, int padre){
     T temp = heap.get(padre);
