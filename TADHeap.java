@@ -18,6 +18,20 @@ public class TADHeap<T extends Comparable<T>>{
     }
   }
   public T remove(){
+    m = a[1]; # La variable m lleva el máximo
+      a[1] = a[n--];
+    j = 1;
+    while(2*j < n) { # mientras tenga algún hijo
+      k = 2*j; # el hijo izquierdo
+        if ( k+1 <= n && a[k+1] > a[k])
+          k = k+1; # el hijo derecho es el mayor
+            if ( a[j] > a[k])
+              break; # es mayor que ambos hijos
+                t = a[j];
+      a[j] = a[k];
+      a[k] = t;
+      j = k; # lo intercambiamos con el mayor hijo
+    }
     return null;
   }
   private void cambiar(int i, int padre){
