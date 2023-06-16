@@ -18,7 +18,7 @@ public class TADHeap<T extends Comparable<T>>{
     }
   }
   public T remove(){
-    m = a[1]; # La variable m lleva el máximo
+    T raiz = heap.get(0); // La variable m lleva el máximo
       a[1] = a[n--];
     j = 1;
     while(2*j < n) { # mientras tenga algún hijo
