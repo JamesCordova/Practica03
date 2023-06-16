@@ -4,19 +4,21 @@ public class TADHeap<T extends Comparable<T>>{
   private ArrayList<T> heap;
 
   public TADHeap(){
-    heap = new Arraylist<T>();
+    heap = new ArrayList<T>();
   }
-  public void insert(){
-    a[++n] = x;
+  public void insert(T item){
+    heap.add(item);
     T temp;
-    for(j=n; j>1 && a[j]>a[j/2]; j/=2) {
+    for(int i = heap.size(); i>1 && a[j]>a[j/2]; heap.get(i)) {
       //intercambiamos con el padre
-      temp = a[j];
-      a[j] = a[j/2];
-      a[j/2] = temp;
+      padre = i / 2;
+      cambiar(i, padre)
     }
   }
   public T remove(){
+
+  }
+  private void cmabiar(int i, int padre){
 
   }
 
