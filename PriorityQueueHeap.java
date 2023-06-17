@@ -6,7 +6,7 @@ public class PriorityQueueHeap<T extends Comparable<T>>{
   }
 
   public void enqueue(T item){
-    
+    heap.insert(item);
   }
 
   public T dequeue(){
