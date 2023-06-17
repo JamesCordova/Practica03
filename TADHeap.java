@@ -44,6 +44,13 @@ public class TADHeap<T extends Comparable<T>>{
     if((i - 1)/2 < heap.size() && heap.get((i - 1)/2).compareTo(heap.get(temp)) > 0){
       temp = (i - 1)/2;
     }
+    if((i * 2) + 1 < heap.size() && heap.get((i * 2) + 1).compareTo(heap.get(temp)) > 0){
+      temp = (i * 2) + 1;
+    }
+    if(temp != i){
+      cambiar(i, temp);
+      ordenar(temp); // llamaremos recursivamente hasta que este ordenado
+    }
     
   }
   public int search(T item){
