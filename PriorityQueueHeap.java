@@ -6,11 +6,11 @@ public class PriorityQueueHeap<T extends Comparable<T>>{
   }
 
   public void enqueue(T item){
-
+    
   }
 
   public T dequeue(){
-
+    return heap.remove();
   }
 
   public T front(){
