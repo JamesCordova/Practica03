@@ -22,17 +22,18 @@ public class TADHeap<T extends Comparable<T>>{
                           // a[1] = a[n--];
     T ult = heap.get(heap.size()); // tomamos el valor del ultimo item
     heap.set(0, ult); // reemplazamos el valor del primero con el ultimo item
-    heap.remove(heap.size() - 1) // eliminamos el ultimo valor
-      int j = 1;
+    heap.remove(heap.size() - 1); // eliminamos el ultimo valor
+    int j = 1; // sera el padre por donde empezar
     while(2 * j < heap.size()) { // mientras tenga algún hijo
       int k = 2 * j; // el hijo izquierdo
       if ( k + 1 <= heap.size() && heap.get(k + 1) > heap.get(k)) // Si existe el derecho y es mayor al izquierdo
         k++; // el hijo derecho es el mayor, entonces tomamos el el derecho a modificar
-      if ( a[j] > a[k])
-        break; # es mayor que ambos hijos
-          t = a[j];
-      a[j] = a[k];
-      a[k] = t;
+      if ( heap.get(j) > heap.get(k)) // j el padre, comparado con el mayor de sus hijos
+        break; // la posicion es correcta el padre es el mayor
+      /* t = a[j];
+      a[j] = a[k]; // cambiar valores
+      a[k] = t; */
+      cambiar(k, j); // cambiamos valores
       j = k; # lo intercambiamos con el mayor hijo
     }*/
     return null;
