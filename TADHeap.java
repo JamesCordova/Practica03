@@ -26,9 +26,9 @@ public class TADHeap<T extends Comparable<T>>{
     int j = 1; // sera el padre por donde empezar
     while(2 * j < heap.size()) { // mientras tenga algún hijo
       int k = 2 * j; // el hijo izquierdo
-      if ( k + 1 <= heap.size() && heap.get(k + 1) > heap.get(k)) // Si existe el derecho y es mayor al izquierdo
+      if ( k + 1 <= heap.size() && heap.get(k + 1).compareTo(heap.get(k)) > 0) //Si el derecho es mayor al izquierdo
         k++; // el hijo derecho es el mayor, entonces tomamos el el derecho a modificar
-      if ( heap.get(j) > heap.get(k)) // j el padre, comparado con el mayor de sus hijos
+      if ( heap.get(j).compareTo(heap.get(k)) > 0) // j el padre, comparado con el mayor de sus hijos
         break; // la posicion es correcta el padre es el mayor
       /* t = a[j];
       a[j] = a[k]; // cambiar valores
