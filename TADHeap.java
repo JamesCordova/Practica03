@@ -41,7 +41,7 @@ public class TADHeap<T extends Comparable<T>>{
   }
 
   private int padre(int i){
-    return i/2;
+    return (i - 1)/2;
   }
 
   public String toString(){
