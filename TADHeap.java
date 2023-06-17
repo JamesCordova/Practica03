@@ -24,7 +24,7 @@ public class TADHeap<T extends Comparable<T>>{
     heap.set(0, ult); // reemplazamos el valor del primero con el ultimo item
     heap.remove(heap.size() - 1); // eliminamos el ultimo valor
     int j = 1; // sera el padre por donde empezar
-    while(2 * j < heap.size()) { // mientras tenga algún hijo
+    while(2 * j < heap.size() - 1) { // mientras tenga algún hijo
       int k = 2 * j; // el hijo izquierdo
       if ( k + 1 <= heap.size() && heap.get(k + 1).compareTo(heap.get(k)) > 0) //Si el derecho es mayor al izquierdo
         k++; // el hijo derecho es el mayor, entonces tomamos el el derecho a modificar
