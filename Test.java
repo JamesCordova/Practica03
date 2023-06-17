@@ -9,6 +9,11 @@ public class Test{
     n.insert(1);
     n.insert(6);
     n.insert(10);
+    n.remove(2);
+    n.remove(22);
+    n.remove(10);
+    n.remove(6);
+    n.remove(2);
     System.out.println(n);
   }
 }
