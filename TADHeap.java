@@ -17,7 +17,7 @@ public class TADHeap<T extends Comparable<T>>{
       padre = padre(i); // avanzamos
     }
   }
-  public T remove(){
+  public void remove(){
     T raiz = heap.get(0); // La variable m lleva el máximo
                           // a[1] = a[n--];
     T ult = heap.get(heap.size()); // tomamos el valor del ultimo item
@@ -34,9 +34,8 @@ public class TADHeap<T extends Comparable<T>>{
       a[j] = a[k]; // cambiar valores
       a[k] = t; */
       cambiar(k, j); // cambiamos valores
-      j = k; # lo intercambiamos con el mayor hijo
-    }*/
-    return null;
+      j = k; // lo intercambiamos con el mayor hijo
+    }
   }
   private void cambiar(int i, int padre){
     T temp = heap.get(padre);
