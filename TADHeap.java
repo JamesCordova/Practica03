@@ -20,9 +20,9 @@ public class TADHeap<T extends Comparable<T>>{
   public void remove(){
     T raiz = heap.get(0); // La variable m lleva el máximo
                           // a[1] = a[n--];
-    T ult = heap.get(heap.size()); // tomamos el valor del ultimo item
+    T ult = heap.get(heap.size() - 1); // tomamos el valor del ultimo item
     heap.set(0, ult); // reemplazamos el valor del primero con el ultimo item
-    heap.remove(heap.size() - 1); // eliminamos el ultimo valor
+    heap.remove(heap.size()); // eliminamos el ultimo valor
     int j = 1; // sera el padre por donde empezar
     while(2 * j < heap.size() - 1) { // mientras tenga algún hijo
       int k = 2 * j; // el hijo izquierdo
