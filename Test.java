@@ -15,5 +15,7 @@ public class Test{
     n.remove();
     System.out.println(n);
     System.out.println("Busqueda(2): " + n.search(19));
+    System.out.println("Elemento de mayor prioridad: " + n.MayorPrioridad());
+	  System.out.println("Elemento de menor prioridad: " + n.MenorPrioridad());
   }
 }
