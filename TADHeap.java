@@ -89,5 +89,19 @@ public class TADHeap<T extends Comparable<T>>{
     }
     return res;
   }
+  public T MayorPrioridad() {
+    return heap.get(0);
+  }
 
+  public T MenorPrioridad() {
+    T menor = heap.get(0);
+
+    for (T item : heap) {
+        if (item.compareTo(menor) < 0) {
+           menor = item;
+        }
+    }
+
+    return menor;
+   }
 }
