@@ -41,11 +41,18 @@ public class TADHeap<T extends Comparable<T>>{
   private int search(T item){
     // para aprovechar el HEAP utilizaremos el compareTo
     int i = 0;
-    int j = heap.size();
+    int j = heap.size() - 1;
     while(i < j){
       int ind = i * 2;
-      if(item.compareTo(heap.get(ind)) > 0){
-
+      int comp = item.compareTo(heap.get(ind))
+      if( comp == 0){
+        return ind;
+      }
+      else if(comp > 0){
+        j = ind - 1;
+      }
+      else{
+        i = ind + 1;
       }
     }
     return -1;
