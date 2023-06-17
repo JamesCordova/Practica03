@@ -38,6 +38,9 @@ public class TADHeap<T extends Comparable<T>>{
     }
     return raiz;
   }
+  private int search(T item){
+    return -1;
+  }
   private void cambiar(int i, int padre){
     T temp = heap.get(padre);
     heap.set(padre, heap.get(i));
