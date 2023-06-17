@@ -14,5 +14,6 @@ public class Test{
     System.out.println(n);
     n.remove();
     System.out.println(n);
+    System.out.println("Busqueda(2): " + n.search(19));
   }
 }

@@ -35,10 +35,18 @@ public class TADHeap<T extends Comparable<T>>{
       a[k] = t; */
       cambiar(k, j); // cambiamos valores
       j = k; // lo intercambiamos con el mayor hijo
+      ordenar(0); // reordenar el menor numero enviado a raiz
     }
     return raiz;
   }
-  private int search(T item){
+  public void ordenar(int i){
+    int temp = i;
+    if((i - 1)/2 < heap.size() && heap.get((i - 1)/2).compareTo(heap.get(temp)) > 0){
+      temp = (i - 1)/2;
+    }
+    
+  }
+  public int search(T item){
     // para aprovechar el HEAP utilizaremos el compareTo
     int i = 0;
     int j = heap.size() - 1;
