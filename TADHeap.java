@@ -44,7 +44,7 @@ public class TADHeap<T extends Comparable<T>>{
     int j = heap.size() - 1;
     while(i < j){
       int ind = (i + j) / 2;
-      int comp = item.compareTo(heap.get(ind))
+      int comp = item.compareTo(heap.get(ind));
       if( comp == 0){
         return ind;
       }
