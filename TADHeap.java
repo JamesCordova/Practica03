@@ -23,10 +23,10 @@ public class TADHeap<T extends Comparable<T>>{
     T ult = heap.get(heap.size()); // tomamos el valor del ultimo item
     heap.set(0, ult); // reemplazamos el valor del primero con el ultimo item
     heap.remove(heap.size() - 1) // eliminamos el ultimo valor
-    /* j = 1;
-    while(2*j < n) { # mientras tenga algún hijo
-      k = 2*j; # el hijo izquierdo
-        if ( k+1 <= n && a[k+1] > a[k])
+    int j = 1;
+    while(2 * j < heap.size()) { // mientras tenga algún hijo
+      int k = 2 * j; // el hijo izquierdo
+        if ( k + 1 <= n && a[k+1] > a[k])
           k = k+1; # el hijo derecho es el mayor
             if ( a[j] > a[k])
               break; # es mayor que ambos hijos
