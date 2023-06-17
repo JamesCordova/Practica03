@@ -13,12 +13,12 @@ public class PriorityQueueHeap<T extends Comparable<T>>{
     return heap.remove();
   }
 
-  public T front(){
-
+  public T Front() {
+    return heap.MayorPrioridad();
   }
 
-  public T back(){
-
+    public T Back() {
+    return heap.MenorPrioridad();
   }
 
 }
