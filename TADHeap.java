@@ -19,7 +19,7 @@ public class TADHeap<T extends Comparable<T>>{
   }
   public T remove(){
     T raiz = heap.get(0); // La variable m lleva el máximo
-    a[1] = a[n--];
+    /* a[1] = a[n--];
     j = 1;
     while(2*j < n) { # mientras tenga algún hijo
       k = 2*j; # el hijo izquierdo
@@ -31,7 +31,7 @@ public class TADHeap<T extends Comparable<T>>{
       a[j] = a[k];
       a[k] = t;
       j = k; # lo intercambiamos con el mayor hijo
-    }
+    }*/
     return null;
   }
   private void cambiar(int i, int padre){
